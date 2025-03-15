@@ -1,0 +1,3 @@
+0
+SimpleGoal,Run a marathon,Work out everyday cardio ,100,False
+EternalGoal,read scriptures,Read a chapter daily ,100
