@@ -4,38 +4,41 @@ class Program
 {
     static void Main()
     {
-        StudyPlanner planner = new StudyPlanner();
+        TaskManager manager = new TaskManager();
         bool running = true;
-
+        
         while (running)
         {
-            Console.WriteLine("\nStudy Planner");
-            Console.WriteLine("1. Add Study Task");
+            Console.Clear();
+            Console.WriteLine("Task planner");
+            Console.WriteLine("1. Add Simple Task");
             Console.WriteLine("2. View Tasks");
-            Console.WriteLine("3. Mark Task as Done");
+            Console.WriteLine("3. Record Task Event");
             Console.WriteLine("4. Exit");
             Console.Write("Choose an option: ");
-            
-            string choice = Console.ReadLine();
-            switch (choice)
+            string option = Console.ReadLine();
+
+            switch (option)
             {
                 case "1":
-                    planner.AddTask();
+                    manager.AddTask();
                     break;
                 case "2":
-                    planner.ViewTasks();
+                    manager.ViewTasks();
                     break;
                 case "3":
-                    planner.CompleteTask();
+                    manager.RecordTaskProgress();
                     break;
                 case "4":
                     running = false;
-                    Console.WriteLine("Keep going! You're doing great!");
                     break;
                 default:
-                    Console.WriteLine("Invalid choice. Try again.");
+                    Console.WriteLine("Invalid option. Try again.");
                     break;
             }
+            
+            Console.WriteLine("Press Enter to continue...");
+            Console.ReadLine();
         }
     }
 }
