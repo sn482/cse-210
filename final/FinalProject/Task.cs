@@ -1,22 +1,23 @@
 using System;
 
-abstract class Task
+public abstract class Task
 {
-    protected string name;
-    protected string description;
-    protected bool isComplete;
+    protected string _title;
+    protected string _description;
+    protected bool _isComplete;
 
-    public Task(string name, string description)
+    public Task(string title, string description)
     {
-        this.name = name;
-        this.description = description;
-        isComplete = false;
+        _title = title;
+        _description = description;
+        _isComplete = false;
     }
 
     public abstract void RecordEvent();
 
     public virtual string GetStatus()
     {
-        return (isComplete ? "[X] " : "[ ] ") + name + " - " + description;
+        return (_isComplete ? "[X] " : "[ ] ") + _title + " - " + _description;
     }
 }
+

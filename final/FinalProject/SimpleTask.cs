@@ -5,10 +5,10 @@ class SimpleTask : Task
 
     public override void RecordEvent()
     {
-        if (!isComplete)
+        if (!_isComplete)
         {
-            isComplete = true;
-            Console.WriteLine("Task completed: " + name);
+            _isComplete = true;
+            Console.WriteLine("Task completed: " + _title);
         }
         else
         {
